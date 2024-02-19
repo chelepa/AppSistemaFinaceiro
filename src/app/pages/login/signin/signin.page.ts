@@ -40,6 +40,6 @@ export class SigninPage implements OnInit {
   }
 
   resetPassword() {
-
+    this.route.navigate(['reset-password']);
   }
 }
