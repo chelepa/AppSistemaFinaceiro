@@ -1,13 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding animated fadeIn login auth-page">
+  <div class="auth-content">
+    <ion-card style="border-radius: 25px;">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-card-content>
+        <div class="login-form ion-padding">          
+          <div class="form-input">
+            <ion-item>
+              <ion-input [(ngModel)]="nome" placeholder="Nome"/>
+            </ion-item>
+          </div>
+          <div class="form-input">
+            <ion-item>
+              <ion-input [(ngModel)]="lastName" class="form-control my-3" placeholder="Sobrenome"/>
+            </ion-item>
+          </div>
+          <div class="form-input">
+            <ion-item>
+              <ion-input [(ngModel)]="cell" mask="000.000.000-00" class="form-control my-3" placeholder="Celular"/>
+            </ion-item>
+          </div>
+          <div class="form-input">
+            <ion-item>
+              <ion-input [(ngModel)]="email" type="email" class="form-control my-3" placeholder="e-mail"/>
+            </ion-item>
+          </div>
+          <div class="form-input">
+            <ion-item>
+              <ion-input [(ngModel)]="senha" class="form-control my-3" placeholder="Senha"/>
+            </ion-item>
+          </div>
+          <div class="form-input">
+            <ion-item>
+              <ion-input [(ngModel)]="conf_senha" class="form-control my-3" placeholder="Confirme a Senha"/>
+            </ion-item>
+          </div>
+          <div class="header">
+            <div class="action-button">
+              <ion-button class="button-return" (click)="return()">Voltar</ion-button>
+            </div>
+            <div class="action-button">
+              <ion-button class="button-cad" (click)="register()">Cadastrar</ion-button>
+            </div>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
