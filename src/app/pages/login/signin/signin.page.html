@@ -1,0 +1,48 @@
+<ion-content class="ion-padding animated fadeIn login auth-page">
+
+  <div class="auth-content">
+
+    <div padding-horizontal text-center class="animated fadeInDown" style="
+    text-align: -webkit-center;">
+      <h4 no-margin>
+          <ion-img class="img-login center" src="../assets/logo.png"></ion-img>
+       </h4>
+    </div>
+
+    <ion-card style="border-radius: 25px;">
+          
+      <ion-card-content>
+        <div class="login-form ion-padding">
+          <div class="form-input">
+            <ion-icon name="mail-outline"></ion-icon>
+            <ion-item>
+              <ion-input type="Email" placeholder="E-mail" [(ngModel)]="email"></ion-input>
+            </ion-item>
+          </div>
+          <div class="form-input">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <ion-item>
+              <ion-input type="password" placeholder="Senha" [(ngModel)]="password"></ion-input>
+            </ion-item>
+          </div>
+          <div class="action-button">
+            <ion-button class="login-button" (click)="signIn()">Entrar</ion-button>
+          </div>
+        </div>
+
+        <ion-grid class="action-register">
+          <ion-row>
+            <ion-col class="ion-align-self-start" (click)="register()">
+              <div>Cadastre-se</div>
+            </ion-col>
+            <ion-col class="ion-align-self-end" (click)="resetPassword()">
+              <div>Esqueceu a Senha?</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+</ion-content>
